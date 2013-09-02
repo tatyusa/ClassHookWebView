@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		363D83C917D458CE00C00798 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 363D83C817D458CE00C00798 /* index.html */; };
+		367A9BFB17D468A500BB98E4 /* ClassHookWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 367A9BFA17D468A500BB98E4 /* ClassHookWebView.m */; };
 		36BDB44117D0A36E009CFBCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BDB44017D0A36E009CFBCE /* UIKit.framework */; };
 		36BDB44317D0A36E009CFBCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BDB44217D0A36E009CFBCE /* Foundation.framework */; };
 		36BDB44517D0A36E009CFBCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BDB44417D0A36E009CFBCE /* CoreGraphics.framework */; };
@@ -21,6 +23,7 @@
 		36BDB46117D0A36E009CFBCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BDB44217D0A36E009CFBCE /* Foundation.framework */; };
 		36BDB46917D0A36E009CFBCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36BDB46717D0A36E009CFBCE /* InfoPlist.strings */; };
 		36BDB46C17D0A36E009CFBCE /* ClassHookWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDB46B17D0A36E009CFBCE /* ClassHookWebViewTests.m */; };
+		36BDB47A17D0A3CE009CFBCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDB47917D0A3CE009CFBCE /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		363D83C817D458CE00C00798 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		367A9BF917D4689200BB98E4 /* ClassHookWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassHookWebView.h; path = Vendor/ClassHookWebView.h; sourceTree = "<group>"; };
+		367A9BFA17D468A500BB98E4 /* ClassHookWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassHookWebView.m; path = Vendor/ClassHookWebView.m; sourceTree = "<group>"; };
 		36BDB43D17D0A36E009CFBCE /* ClassHookWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassHookWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BDB44017D0A36E009CFBCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		36BDB44217D0A36E009CFBCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,8 @@
 		36BDB46817D0A36E009CFBCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		36BDB46A17D0A36E009CFBCE /* ClassHookWebViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassHookWebViewTests.h; sourceTree = "<group>"; };
 		36BDB46B17D0A36E009CFBCE /* ClassHookWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassHookWebViewTests.m; sourceTree = "<group>"; };
+		36BDB47817D0A3CE009CFBCE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		36BDB47917D0A3CE009CFBCE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,8 @@
 		36BDB43417D0A36E009CFBCE = {
 			isa = PBXGroup;
 			children = (
+				367A9BF917D4689200BB98E4 /* ClassHookWebView.h */,
+				367A9BFA17D468A500BB98E4 /* ClassHookWebView.m */,
 				36BDB44617D0A36E009CFBCE /* ClassHookWebView */,
 				36BDB46417D0A36E009CFBCE /* ClassHookWebViewTests */,
 				36BDB43F17D0A36E009CFBCE /* Frameworks */,
@@ -112,8 +122,11 @@
 		36BDB44617D0A36E009CFBCE /* ClassHookWebView */ = {
 			isa = PBXGroup;
 			children = (
+				363D83C817D458CE00C00798 /* index.html */,
 				36BDB44F17D0A36E009CFBCE /* AppDelegate.h */,
 				36BDB45017D0A36E009CFBCE /* AppDelegate.m */,
+				36BDB47817D0A3CE009CFBCE /* ViewController.h */,
+				36BDB47917D0A3CE009CFBCE /* ViewController.m */,
 				36BDB44717D0A36E009CFBCE /* Supporting Files */,
 			);
 			path = ClassHookWebView;
@@ -227,6 +240,7 @@
 				36BDB45317D0A36E009CFBCE /* Default.png in Resources */,
 				36BDB45517D0A36E009CFBCE /* Default@2x.png in Resources */,
 				36BDB45717D0A36E009CFBCE /* Default-568h@2x.png in Resources */,
+				363D83C917D458CE00C00798 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +277,8 @@
 			files = (
 				36BDB44D17D0A36E009CFBCE /* main.m in Sources */,
 				36BDB45117D0A36E009CFBCE /* AppDelegate.m in Sources */,
+				36BDB47A17D0A3CE009CFBCE /* ViewController.m in Sources */,
+				367A9BFB17D468A500BB98E4 /* ClassHookWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ClassHookWebView/ClassHookWebView-Prefix.pch";
 				INFOPLIST_FILE = "ClassHookWebView/ClassHookWebView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -377,6 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ClassHookWebView/ClassHookWebView-Prefix.pch";
 				INFOPLIST_FILE = "ClassHookWebView/ClassHookWebView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,6 +453,7 @@
 				36BDB47117D0A36E009CFBCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36BDB47217D0A36E009CFBCE /* Build configuration list for PBXNativeTarget "ClassHookWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +462,7 @@
 				36BDB47417D0A36E009CFBCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
