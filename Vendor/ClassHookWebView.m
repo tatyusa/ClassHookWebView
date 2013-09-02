@@ -37,8 +37,7 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
     for(NSString *className in [self.actions allKeys]){
-        NSString *js = [NSString stringWithFormat:
-                         @""
+        NSString *js = [NSString stringWithFormat:@""
                          "var list = document.getElementsByClassName('%@'); "
                          "for(var i=0;i<list.length;i++){ "
                          "  var e = list[i]; "
