@@ -12,37 +12,40 @@ ARC is required.
 ##Getting Started
 First you get ClassHookWebView.
 
-  $git clone git@github.com:tatyusa/ClassHookWebView.git
+    $git clone git@github.com:tatyusa/ClassHookWebView.git
   
 Add ClassHookWebView.h/ClassHookWebView.m to your project.
   
-  ClassHookWebView/Vender/ClassHookWebView.h
-  ClassHookWebView/Vender/ClassHookWebView.m
+    ClassHookWebView/Vender/ClassHookWebView.h
+    ClassHookWebView/Vender/ClassHookWebView.m
   
 In the class you want to use ClassHookWebView in, import the `ClassHookWebView.h`.
 
-  #import "ClassHookWebView.h"
+    #import "ClassHookWebView.h"
   
 Set the Protocol and make property.
 
-  @interface ViewController: UIViewController<UIWebViewDelegate>
-  @property (nonatomic,retain) ClassHookWebView *chWebView;
+    @interface ViewController: UIViewController<UIWebViewDelegate>
+    @property (nonatomic,retain) ClassHookWebView *chWebView;
+
 Synthesize it.
 
-  @synthesize chWebView;
+    @synthesize chWebView;
+
 Initialize the chWebView.
   
-  chWebView = [[ClassHookWebView alloc] initWithFrame:self.view.bounds];
-  [chWebView setDelegate:self];
-  [self.view addSubview:chWebView];
+    chWebView = [[ClassHookWebView alloc] initWithFrame:self.view.bounds];
+    [chWebView setDelegate:self];
+    [self.view addSubview:chWebView];
+
 Add class hook actions to chWebView.
 
-  [chWebView addTarget:self action:@selector(showAlert:) forClass:@"app-show-alert"];
+    [chWebView addTarget:self action:@selector(showAlert:) forClass:@"app-show-alert"];
     [chWebView addTarget:self action:@selector(startActivity) forClass:@"app-start-activity"];
     …
 Last you add the class to DOMs in your web site
 
-  <a class="app-show-alert" href="https://github.com/tatyusa/ClassHookWebView">Alert Show</a>
+    <a class="app-show-alert" href="https://github.com/tatyusa/ClassHookWebView">Alert Show</a>
     <div class="class-hook-block app-show-alert" href="hahaha">Tap me!</div>
 
 That's all.
