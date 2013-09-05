@@ -24,6 +24,8 @@
 		36BDB46917D0A36E009CFBCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36BDB46717D0A36E009CFBCE /* InfoPlist.strings */; };
 		36BDB46C17D0A36E009CFBCE /* ClassHookWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDB46B17D0A36E009CFBCE /* ClassHookWebViewTests.m */; };
 		36BDB47A17D0A3CE009CFBCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDB47917D0A3CE009CFBCE /* ViewController.m */; };
+		36D1E26E17D703C300524974 /* CHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D1E26D17D703C300524974 /* CHTestViewController.m */; };
+		36D1E27017D7156A00524974 /* test_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 36D1E26F17D7156A00524974 /* test_index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		36BDB46B17D0A36E009CFBCE /* ClassHookWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassHookWebViewTests.m; sourceTree = "<group>"; };
 		36BDB47817D0A3CE009CFBCE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		36BDB47917D0A3CE009CFBCE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36D1E26C17D703C300524974 /* CHTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTestViewController.h; sourceTree = "<group>"; };
+		36D1E26D17D703C300524974 /* CHTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTestViewController.m; sourceTree = "<group>"; };
+		36D1E26F17D7156A00524974 /* test_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test_index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +154,11 @@
 		36BDB46417D0A36E009CFBCE /* ClassHookWebViewTests */ = {
 			isa = PBXGroup;
 			children = (
+				36D1E26F17D7156A00524974 /* test_index.html */,
 				36BDB46A17D0A36E009CFBCE /* ClassHookWebViewTests.h */,
 				36BDB46B17D0A36E009CFBCE /* ClassHookWebViewTests.m */,
+				36D1E26C17D703C300524974 /* CHTestViewController.h */,
+				36D1E26D17D703C300524974 /* CHTestViewController.m */,
 				36BDB46517D0A36E009CFBCE /* Supporting Files */,
 			);
 			path = ClassHookWebViewTests;
@@ -249,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BDB46917D0A36E009CFBCE /* InfoPlist.strings in Resources */,
+				36D1E27017D7156A00524974 /* test_index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BDB46C17D0A36E009CFBCE /* ClassHookWebViewTests.m in Sources */,
+				36D1E26E17D703C300524974 /* CHTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
