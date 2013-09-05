@@ -389,6 +389,10 @@
 		36BDB47017D0A36E009CFBCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ClassHookWebView/ClassHookWebView-Prefix.pch";
 				INFOPLIST_FILE = "ClassHookWebView/ClassHookWebView-Info.plist";
@@ -401,6 +405,10 @@
 		36BDB47117D0A36E009CFBCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ClassHookWebView/ClassHookWebView-Prefix.pch";
 				INFOPLIST_FILE = "ClassHookWebView/ClassHookWebView-Info.plist";
@@ -422,6 +430,7 @@
 				GCC_PREFIX_HEADER = "ClassHookWebView/ClassHookWebView-Prefix.pch";
 				INFOPLIST_FILE = "ClassHookWebViewTests/ClassHookWebViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -439,6 +448,7 @@
 				GCC_PREFIX_HEADER = "ClassHookWebView/ClassHookWebView-Prefix.pch";
 				INFOPLIST_FILE = "ClassHookWebViewTests/ClassHookWebViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
