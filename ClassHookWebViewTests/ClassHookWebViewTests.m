@@ -24,6 +24,28 @@
     STAssertEqualObjects(chWebView.originalDelegate, viewController, @"Delegate doesn't set correctly.");
 }
 
+-(void)testDelegateMethod
+{
+    ClassHookWebView *chWebView = [[ClassHookWebView alloc] init];
+    CHTestViewController *viewController = [[CHTestViewController alloc] init];
+    [chWebView setDelegate:viewController];
+    
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"test_index" ofType:@"html"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+    
+    [chWebView webView:chWebView shouldStartLoadWithRequest:request navigationType:UIWebViewNavigationTypeLinkClicked];
+    STAssertTrue(viewController.stateWebViewShouldStartLoadWithRequest, @"Doesn't work webView:shouldStartLoadWithRequest:navigationType:");
+    
+    [chWebView webViewDidStartLoad:chWebView];
+    STAssertTrue(viewController.stateWebViewDidStartLoad, @"Doesn't work webViewDidStartLoad:");
+    
+    [chWebView webViewDidFinishLoad:chWebView];
+    STAssertTrue(viewController.stateWebViewDidFinishLoad, @"Doesn't work webViewDidFinishLoad:");
+    
+    [chWebView webView:chWebView didFailLoadWithError:nil];
+    STAssertTrue(viewController.stateWebviewDidFailLoadWithError, @"Doesn't work webView:didFailLoadWithError:");
+}
+
 
 -(void)testAddTargetActionForClass
 {
@@ -95,6 +117,5 @@
     } while (chWebView.loading);
     STAssertEqualObjects(@"hahaha", viewController.string, @"app-method1 can't hooked");
 }
-
 
 @end
