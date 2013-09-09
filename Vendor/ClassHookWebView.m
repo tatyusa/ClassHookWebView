@@ -127,7 +127,7 @@
 {
     if(self.originalDelegate!=nil&&[self.originalDelegate respondsToSelector:@selector(webView:didFailLoadWithError:)])
     {
-        [self.originalDelegate webViewDidStartLoad:webView];
+        [self.originalDelegate webView:webView didFailLoadWithError:error];
     }
 }
 @end
