@@ -91,28 +91,30 @@
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString *requestString = [[request URL] absoluteString];
-    if ([requestString rangeOfString:@"app-api://"].location == NSNotFound) return YES;
-    
-    NSError *error = nil;
-    NSString *pattern = [NSString stringWithFormat:@"app-api://(.+)\\((.+)\\)"];
-    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
-    if(error != nil) return NO;
-    
-    NSTextCheckingResult *match = [reg firstMatchInString:requestString options:0 range:NSMakeRange(0, requestString.length)];
-    if(match.numberOfRanges == 0) return NO;
-    
-    NSString *className = [[requestString substringWithRange:[match rangeAtIndex:1]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *json = [[requestString substringWithRange:[match rangeAtIndex:2]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    NSString *href = dict[@"href"];
-    
-    [self execAppAPI:className href:href];
+    if ([requestString rangeOfString:@"app-api://"].location != NSNotFound)
+    {
+        NSError *error = nil;
+        NSString *pattern = [NSString stringWithFormat:@"app-api://(.+)\\((.+)\\)"];
+        NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
+        if(error != nil) return NO;
+        
+        NSTextCheckingResult *match = [reg firstMatchInString:requestString options:0 range:NSMakeRange(0, requestString.length)];
+        if(match.numberOfRanges == 0) return NO;
+        
+        NSString *className = [[requestString substringWithRange:[match rangeAtIndex:1]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *json = [[requestString substringWithRange:[match rangeAtIndex:2]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+        NSString *href = dict[@"href"];
+        
+        [self execAppAPI:className href:href];
+    }
     
     if(self.originalDelegate!=nil&&[self.originalDelegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)])
     {
         return [self.originalDelegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
     }
-    return YES;
+    
+    return ([requestString rangeOfString:@"app-api://"].location == NSNotFound);
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView
