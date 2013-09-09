@@ -10,6 +10,33 @@
 
 @implementation ClassHookWebView
 
+#pragma mark init messages
+-(id)init
+{
+    self = [super init];
+    if(self){
+        [super setDelegate:self];
+    }
+    return self;
+}
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if(self){
+        [super setDelegate:self];
+    }
+    return self;
+}
+-(id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if(self){
+        [super setDelegate:self];
+    }
+    return self;
+}
+#pragma mark -
+
 -(void)setDelegate:(id<UIWebViewDelegate>)delegate
 {
     [super setDelegate:self];
