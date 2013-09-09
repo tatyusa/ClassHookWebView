@@ -28,7 +28,10 @@
     SEL action = NSSelectorFromString(self.actions[className][@"action"]);
     if ([target respondsToSelector:action])
     {
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         [target performSelector:action withObject:href];
+        #pragma clang diagnostic pop
     }
 }
 
