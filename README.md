@@ -1,4 +1,5 @@
 #ClassHookWebView
+[![Build Status](https://travis-ci.org/tatyusa/ClassHookWebView.png)](https://travis-ci.org/tatyusa/ClassHookWebView.png)
 
 `ClassHookWebView` is a web view for iOS. The parent is UIWebView. It provides functionality for running a method in an iOS app by trigger on a web site. To use this functionality, you just add a class to DOMs in your web site.
 
