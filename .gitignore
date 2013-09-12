@@ -1,5 +1,11 @@
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcworkspace/contents.xcworkspacedata
+# XCode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
 .DS_Store
 build/
